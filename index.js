@@ -1,7 +1,7 @@
 const twofactor = require("node-2fa");
 const commander = require("commander");
 var sqlite3 = require("sqlite3").verbose();
-let db = new sqlite3.Database("./db/accs.db");
+let db = new sqlite3.Database("./db/prod.db");
 const program = new commander.Command();
 program.version("0.0.1");
 program
