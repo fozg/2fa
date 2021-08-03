@@ -9,5 +9,8 @@
     "node-2fa": "^2.0.2",
     "sqlite3": "^5.0.2"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "bin": {
+    "2fa": "./global/index.js"
+  }
 }
