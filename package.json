@@ -1,0 +1,10 @@
+{
+  "name": "2fa",
+  "description": "2fa",
+  "author": "@fozg",
+  "dependencies": {
+    "commander": "^8.1.0",
+    "node-2fa": "^2.0.2",
+    "sqlite3": "^5.0.2"
+  }
+}
