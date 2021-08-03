@@ -8,5 +8,6 @@
     "commander": "^8.1.0",
     "node-2fa": "^2.0.2",
     "sqlite3": "^5.0.2"
-  }
+  },
+  "preferGlobal": true
 }
