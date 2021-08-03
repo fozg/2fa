@@ -1,6 +1,7 @@
 {
   "name": "2fa",
   "description": "2fa",
+  "version": "0.0.1",
   "author": "@fozg",
   "dependencies": {
     "commander": "^8.1.0",
