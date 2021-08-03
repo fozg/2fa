@@ -3,6 +3,7 @@
   "description": "2fa",
   "version": "0.0.1",
   "author": "@fozg",
+  "main": "index.js",
   "dependencies": {
     "commander": "^8.1.0",
     "node-2fa": "^2.0.2",
