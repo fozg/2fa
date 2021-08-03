@@ -1,8 +1,9 @@
 const twofactor = require("node-2fa");
 const commander = require("commander");
 var sqlite3 = require("sqlite3").verbose();
-let db = new sqlite3.Database("./db/prod.db");
+let db = new sqlite3.Database(__dirname + "/db/prod.db");
 const program = new commander.Command();
+
 program.version("0.0.1");
 program
   .command("add")
@@ -11,14 +12,18 @@ program
   .argument("<secret>", "Secret token")
   .action((name, secret) => {
     db.run(
-      `
-    CREATE TABLE IF NOT EXISTS accounts (
+      `CREATE TABLE IF NOT EXISTS accounts (
         id INTEGER PRIMARY KEY AUTOINCREMENT ,
         name string NOT NULL,
         secret string NOT NULL
         );
-    `
-    ).run(`INSERT INTO accounts(name, secret) values('${name}','${secret}')`);
+    `,
+      () => {
+        db.run(
+          `INSERT INTO accounts(name, secret) values('${name}','${secret}')`
+        );
+      }
+    );
     db.close();
   });
 
